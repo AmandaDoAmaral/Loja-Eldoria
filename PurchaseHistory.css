@@ -1,0 +1,152 @@
+/* Estilo para a tela de histórico */
+.purchase-history {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* Cabeçalho (com cor ajustada) */
+.history-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  background-color: #2d4b44; /* Cor ajustada para combinar com a barra de Lista de Compras */
+}
+
+.history-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.history-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.history-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.history-text h1 {
+  margin: 0;
+  font-size: 1.8rem; /* Aumentei o tamanho do título para maior destaque */
+  color: #fff; /* Cor branca para garantir contraste adequado */
+}
+
+.history-text p {
+  margin: 0;
+  font-size: 1.1rem; /* Tamanho de fonte ajustado */
+  color: #fff; /* Cor branca para garantir legibilidade */
+}
+
+/* Estilos para os cabeçalhos (agora em cima da tabela) */
+.history-table-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2d4b44; /* Cor verde para combinar com a barra de navegação */
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.table-header-item {
+  flex: 1;
+  text-align: center;
+}
+
+/* Estilos para a tabela */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.history-table th,
+.history-table td {
+  text-align: left;
+  padding: 12px; /* Aumentei o padding para dar mais espaço nas células */
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+.history-table th {
+  color: #2d4b44; /* Cor verde para os títulos das colunas */
+  font-weight: bold;
+}
+
+.history-table td {
+  color: #000;
+}
+
+.history-table tr:hover {
+  background-color: #f9f9f9; /* Fundo claro ao passar o mouse */
+}
+
+/* Estilo do total gasto */
+.total-spent {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.total-spent h3 {
+  font-size: 1.3rem; /* Aumentei o tamanho da fonte para destaque */
+  font-weight: bold;
+  color: #2d4b44; /* Cor verde para o total gasto */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .history-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 15px;
+  }
+
+  .history-text h1 {
+    font-size: 1.5rem; /* Reduz o tamanho do título em telas pequenas */
+  }
+
+  .history-text p {
+    font-size: 1rem; /* Ajusta o tamanho da descrição */
+  }
+
+  .history-table th,
+  .history-table td {
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte da tabela */
+    padding: 8px; /* Diminui o padding para se ajustar melhor em telas menores */
+  }
+
+  .total-spent h3 {
+    font-size: 1.1rem; /* Ajusta o tamanho da fonte do total gasto */
+  }
+}
+
+@media (max-width: 480px) {
+  .history-text h1 {
+    font-size: 1.3rem; /* Reduz ainda mais o tamanho do título */
+  }
+
+  .history-text p {
+    font-size: 0.9rem; /* Ajusta o tamanho da descrição em telas muito pequenas */
+  }
+
+  .history-table th,
+  .history-table td {
+    font-size: 0.85rem; /* Ajuste fino para celulares pequenos */
+    padding: 6px; /* Reduz o padding em telas muito pequenas */
+  }
+
+  .total-spent h3 {
+    font-size: 1rem; /* Ajusta o tamanho do total gasto */
+  }
+}

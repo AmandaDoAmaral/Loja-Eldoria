@@ -1,0 +1,104 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%; /* Garante que ocupe toda a largura em telas menores */
+  box-sizing: border-box; /* Ajusta largura considerando o padding */
+}
+
+.logo {
+  height: 6em;
+  max-width: 100%; /* Impede que ultrapasse a largura do contêiner */
+  margin: 0 auto;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  box-sizing: border-box; /* Inclui padding no cálculo da largura */
+  margin: 1rem auto; /* Centraliza e dá espaço entre os cartões */
+  max-width: 600px; /* Limita o tamanho para evitar cartões muito largos */
+  border-radius: 8px; /* Adiciona cantos arredondados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona leve elevação */
+  background-color: #fff; /* Fundo branco para destaque */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Animação ao passar o mouse */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Elevação maior no hover */
+}
+
+.read-the-docs {
+  color: #888;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem; /* Reduz padding em telas menores */
+  }
+
+  .logo {
+    height: 4em; /* Reduz o tamanho da logo */
+    padding: 1em;
+  }
+
+  .card {
+    padding: 1em; /* Menor padding para cartões em dispositivos pequenos */
+    width: 90%; /* Ocupa quase toda a largura */
+    max-width: none; /* Remove o limite fixo de largura */
+  }
+
+  .read-the-docs {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte */
+  }
+}
+
+@media (max-width: 480px) {
+  #root {
+    padding: 0.5rem; /* Padding ainda menor em telas muito pequenas */
+  }
+
+  .logo {
+    height: 3em; /* Ajusta logo para telas menores */
+  }
+
+  .card {
+    padding: 0.8em; /* Reduz padding dos cartões */
+    margin: 0.5rem auto; /* Espaçamento menor entre os cartões */
+  }
+
+  .read-the-docs {
+    font-size: 0.8rem; /* Fonte menor para dispositivos muito pequenos */
+  }
+}

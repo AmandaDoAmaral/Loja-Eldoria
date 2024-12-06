@@ -1,0 +1,211 @@
+/* Estilo geral para o layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e8f0f3; /* Cor de fundo mais clara */
+  height: 100%;
+  box-sizing: border-box; /* Garantir que o padding não afete a altura e largura */
+}
+
+/* Barra superior expandida */
+header {
+  width: 100%; /* Garante que o header ocupe toda a largura */
+  background-color: #2d4b44; /* Cor de fundo da barra superior */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Garante que a barra fique sobre outros elementos */
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+header h1 span {
+  color: #d4a900; /* Cor amarela para "Lista de" */
+}
+
+/* Layout principal com barra lateral e conteúdo */
+.shopping-content {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 100px 20px 20px; /* Adicionando padding superior para compensar a altura do header */
+  height: calc(100vh - 100px); /* Ajusta o conteúdo para preencher a tela sem cobrir a barra */
+  box-sizing: border-box; /* Garante que o padding não afete o cálculo da altura total */
+}
+
+/* Barra lateral */
+.sidebar {
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  background-color: transparent;
+}
+
+/* Ocultar texto duplicado "Total de itens no carrinho" na sidebar */
+.sidebar .cart-total-text {
+  display: none; /* Oculta o texto desnecessário */
+}
+
+/* Conteúdo principal */
+.main-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box; /* Garante que o padding não afete o cálculo da altura total */
+}
+
+/* Seção do carrinho */
+.cart-section {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  overflow-y: auto; /* Adiciona rolagem quando o conteúdo ultrapassar o tamanho da tela */
+}
+
+/* Estilo para o botão "Ver Histórico de Compras" */
+.history-button {
+  background-color: #d4a900; /* Cor amarela */
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.history-button:hover {
+  background-color: #b38a00; /* Amarelo escuro ao passar o mouse */
+}
+
+/* Cartão de carrinho */
+.cart h2 {
+  color: #2d4b44;
+  text-align: center;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  justify-content: space-between; /* Garante que o nome e preço fiquem afastados */
+  align-items: center;
+}
+
+.cart li span {
+  margin-left: 10px; /* Espaço entre nome e preço */
+}
+
+.cart-total h3 {
+  color: #2d4b44;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Estilo para "Total de itens no carrinho" apenas no carrinho */
+.cart-total-text {
+  color: #000; /* Garante que a cor seja preta */
+  font-size: 1rem;
+  margin-top: 10px;
+  font-weight: bold; /* Torna o texto em negrito */
+}
+
+/* Estilos para o formulário de produtos */
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.product-form select,
+.product-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.product-form button {
+  background-color: #2d4b44;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.product-form button:hover {
+  background-color: #1a322f;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 20px;
+  }
+
+  .shopping-content {
+    flex-direction: column;
+    padding: 80px 20px 20px; /* Ajusta o padding para telas pequenas */
+  }
+
+  .main-content, .sidebar {
+    flex: none;
+    width: 100%;
+  }
+
+  .cart-section {
+    padding: 15px;
+  }
+
+  .history-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .cart-total h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-button {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  .cart li {
+    font-size: 0.9rem;
+  }
+
+  .cart-total-text {
+    font-size: 0.9rem;
+  }
+}
