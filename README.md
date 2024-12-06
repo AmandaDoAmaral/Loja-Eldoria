@@ -1,7 +1,5 @@
-Somente códigos para exemplo, para executar será necessário baixar o arquivo ZIP dentro do projeto nomeado como "MissãoFinal_Atualizado"
+Somente arquivos do projeto, para executar será necessário baixar o arquivo ZIP dentro do projeto nomeado como "MissãoFinal_Atualizado" e instalar todos os pacotes necessários.
 Diverta-se!
-
-
 
 # React + Vite
 
